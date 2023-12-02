@@ -6,13 +6,9 @@ pub fn solve1(input: &str) -> usize {
 
 pub fn solve2(input: &str) -> usize {
     let strings = parse(input);
-    let numbers = strings.iter().map(|s| parse_number(s)).collect::<Vec<_>>();
+    let numbers = strings.iter().map(|s| parse_number2(s)).collect::<Vec<_>>();
     numbers.iter().sum()
 }
-
-const NUMBERS: &[&str] = &[
-    "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
-];
 
 fn parse_number(s: &str) -> usize {
     let left: usize = s
@@ -25,6 +21,34 @@ fn parse_number(s: &str) -> usize {
         .find_map(|s| s.to_string().parse().ok())
         .unwrap_or(0);
     left * 10 + right
+}
+
+fn parse_number2(s: &str) -> usize {
+    let digits = [
+        "_0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "_zero", "one", "two", "three", "four",
+        "five", "six", "seven", "eight", "nine",
+    ];
+    let mut first_digit_pos = s.len();
+    let mut first: usize = 0;
+    for (i, d) in digits.iter().enumerate() {
+        if let Some(pos) = s.find(d) {
+            if pos < first_digit_pos {
+                first_digit_pos = pos;
+                first = i % 10;
+            }
+        }
+    }
+    let mut last_digit_pos = 0;
+    let mut last = 0;
+    for (i, d) in digits.iter().enumerate() {
+        if let Some(pos) = s.rfind(d) {
+            if pos >= last_digit_pos {
+                last_digit_pos = pos;
+                last = i % 10;
+            }
+        }
+    }
+    first * 10 + last
 }
 
 fn parse(input: &str) -> Vec<String> {
