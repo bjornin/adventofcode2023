@@ -9,4 +9,5 @@ edition = "2021"
 chrono = "0.4.31"
 day1 = { path = "../day1" }
 day2 = { path = "../day2" }
+day3 = { path = "../day3" }
 reqwest = { version = "0.11.22", features = ["blocking"] }
