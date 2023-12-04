@@ -40,6 +40,7 @@ dependencies = [
  "day1",
  "day2",
  "day3",
+ "day4",
  "reqwest",
 ]
 
@@ -149,6 +150,10 @@ version = "0.1.0"
 
 [[package]]
 name = "day3"
+version = "0.1.0"
+
+[[package]]
+name = "day4"
 version = "0.1.0"
 
 [[package]]
