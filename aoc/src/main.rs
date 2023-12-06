@@ -32,6 +32,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         3 => println!("day3 1:{} 2:{}", day3::solve1(&input), day3::solve2(&input)),
         4 => println!("day4 1:{} 2:{}", day4::solve1(&input), day4::solve2(&input)),
         5 => println!("day5 1:{} 2:{}", day5::solve1(&input), day5::solve2(&input)),
+        6 => println!("day6 1:{} 2:{}", day6::solve1(&input), day6::solve2(&input)),
         // Add more cases for other days as needed
         _ => println!("No solution available for day {}", day_of_month),
     }
