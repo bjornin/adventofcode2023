@@ -38,6 +38,7 @@ version = "0.1.0"
 dependencies = [
  "chrono",
  "day1",
+ "day10",
  "day2",
  "day3",
  "day4",
@@ -147,6 +148,10 @@ checksum = "06ea2b9bc92be3c2baa9334a323ebca2d6f074ff852cd1d7b11064035cd3868f"
 
 [[package]]
 name = "day1"
+version = "0.1.0"
+
+[[package]]
+name = "day10"
 version = "0.1.0"
 
 [[package]]

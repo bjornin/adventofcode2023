@@ -16,4 +16,5 @@ day6 = { path = "../day6" }
 day7 = { path = "../day7" }
 day8 = { path = "../day8" }
 day9 = { path = "../day9" }
+day10 = { path = "../day10" }
 reqwest = { version = "0.11.22", features = ["blocking"] }
