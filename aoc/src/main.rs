@@ -11,7 +11,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     } else {
         args[1].parse::<u32>().unwrap()
     };
-    println!("Day of the month: {}", day_of_month);
+    println!("Day: {}", day_of_month);
     let url = format!("https://adventofcode.com/2023/day/{}/input", day_of_month);
     let file_path = format!("input/day{}.txt", day_of_month);
 
@@ -45,6 +45,16 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             "day11 1:{} 2:{}",
             day11::solve1(&input),
             day11::solve2(&input)
+        ),
+        12 => println!(
+            "day12 1:{} 2:{}",
+            day12::solve1(&input),
+            day12::solve2(&input)
+        ),
+        13 => println!(
+            "day13 1:{} 2:{}",
+            day13::solve1(&input),
+            day13::solve2(&input)
         ),
         // Add more cases for other days as needed
         _ => println!("No solution available for day {}", day_of_month),

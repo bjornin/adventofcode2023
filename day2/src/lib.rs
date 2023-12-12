@@ -75,10 +75,6 @@ fn power_game(game: &String) -> Option<usize> {
         }
     }
     let power = min_red * min_green * min_blue;
-    // println!(
-    //     "red:{} green:{} blue:{} power:{}",
-    //     min_red, min_green, min_blue, power
-    // );
     Some(power)
 }
 
