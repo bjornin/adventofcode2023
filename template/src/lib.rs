@@ -14,9 +14,9 @@ fn parse(input: &str) -> &str {
 mod tests {
     use super::*;
 
-    const INPUT1: &str = "\
+    const INPUT1: &str = r"
 
-";
+    ";
 
     #[test]
     fn a1() {
